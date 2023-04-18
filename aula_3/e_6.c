@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int main() {
+int exe6() {
 
   float num1, num2, resultado;
   char operacao;
