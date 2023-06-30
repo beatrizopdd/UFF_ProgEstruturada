@@ -17,6 +17,6 @@
 ### A14 - Listas encadeadas com nós cabeça
 ### A15 - Listas circulares e Duplamente Encadeadas
 
-- Python Tutor: https://pythontutor.com/c.html#mode=edit
+Python Tutor: https://pythontutor.com/c.html#mode=edit
 
 
