@@ -9,10 +9,12 @@ int main () {
 	
 	/*
 	x = 5
+	
 	y = 5
-		x = 6
+	x = 6
+	
 	z = 6
-		x = 5
+	x = 5
 	*/
 	
 	/* Informe os valores de teste, x, y e z depois da avaliação das seguintes expressões: */ 

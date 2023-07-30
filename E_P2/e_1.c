@@ -10,33 +10,37 @@ struct NOH {
     int amigos;
     struct NOH *prox;
 };
-
 typedef struct NOH empresa;
 
 empresa *cria_lista(nome *vetP, int matR[EMP][EMP]) {
 
-  empresa *C, *U, *N;
+  empresa *cabeca, *final, *nohNovo;
   int qtd;
   
-  C = (empresa*)malloc(sizeof(empresa));
-  C->prox = NULL;
-  U = C;
+  cabeca = (empresa*)malloc(sizeof(empresa));
+  cabeca->prox = NULL;
+  final = cabeca;
   
   for(int i = 0; i < EMP; i++) {
+  
     qtd = 0;
     for(int j = 0; j < EMP; j++) {
       if(matR[i][j] == 1)
         qtd++;
     }
-    N = (empresa*)malloc(sizeof(empresa));
-    strcpy(N->pessoa, vetP[i]);
-    N->amigos = qtd;
-    N->prox = NULL;
-    U->prox = N;
-    U = N;
+    
+    nohNovo = (empresa*)malloc(sizeof(empresa));
+    
+    strcpy(nohNovo->pessoa, vetP[i]);
+    nohNovo->amigos = qtd;
+    nohNovo->prox = NULL;
+    
+    final->prox = nohNovo;
+    final = nohNovo;
     
   }
-  return C;  
+  
+  return cabeca;  
 }
 
 int main() {
@@ -44,29 +48,23 @@ int main() {
   nome vetPessoas[EMP] = {{'A','n','a'}, {'J','o','a','o'}, {'L','i','a'}, {'J','o','s','e'}};
   int matRelacoes[EMP][EMP] = {{0,1,1,0},{1,0,0,1},{1,0,0,1},{0,1,0,0}};
   
-  empresa *E = (empresa*)malloc(sizeof(empresa)), *temp;
-  E->prox = NULL;
+  empresa *E, *aux;
   
-  /* Preenche o vetPessoas com os nomes
-  for(int i = 0; i < EMP; i++) {
-    printf("Digite um nome: ");
+  /* Preenche o vetPessoas com os nomes e preenche o matRelacoes com as amizades
+  for (int i = 0; i < EMP; i++) {
+    printf("\nDigite um nome: ");
     scanf("%s ", vetPessoas[i]);
-  } 
-  */
-  
-  /* Preenche o vetRelacoes com as amizades
-  for(int i = 0; i < EMP; i++) {
-    printf("Amizades de %s: ", vetPessoas[i]);
-    for(int j = i+1; j < EMP; j++) {
+    
+    printf("\nAmizades de %s: ", vetPessoas[i]);
+    for (int j = 0; j < EMP; j++) {
       scanf("%d ", matRelacoes[i][j]);
-    }
-  } 
-  */
+  } */
   
   E = cria_lista(vetPessoas, matRelacoes);
+  
+  temp = E->prox;
 
   printf("\nRELACOES\n");
-  temp = E->prox;
   while (temp != NULL) {
     printf("%s (%d)\n", temp->pessoa, temp->amigos);
     temp = temp->prox;

@@ -1,22 +1,59 @@
 # Sumário
 
-### A1 - Introdução a linguagem C - Constantes/Variáveis/Escopo/Operadores
-### A2 - Comandos de E/S - Estrutura Condicional if/else Comando switch
-### A3 - Estrutura de Repetição
-- Exercício 4 com erro
-### A4 - Funções
-### A5 - Recursividade
-### A6 - Vetores e Matrizes
-### A7 - Vetores de caracteres
-### A8 - Ponteiros
-### A9 - Struct
-### A10 - Pilhas e Filas: Implementação com Vetores
-### A11 - Listas: Implementação com Vetores
-### A12 - Listas: Alocação Encadeada Dinâmica
-### A13 - Pilhas e Filas: Alocação Encadeada Dinâmica
-### A14 - Listas encadeadas com nós cabeça
-### A15 - Listas circulares e Duplamente Encadeadas
+| Prova | N° | Enunciado |
+| --- | --- | --- |
+| P1 | 1 | Calcular a média de salário dos funcionários de uma empresa e dizer qual cargo recebe acima da média. |
+| P1 | 2 | Calcular quantos anos completos se passaram entre duas datas |
+| P2 | 1 | Criar uma função que cria uma ficha do funcionário com nome e quantidade de amigos a partir da matriz amizade |
+| P2 | 2 | Criar uma estrutura de listas de dezenas e suas sublistas|
 
-Python Tutor: https://pythontutor.com/c.html#mode=edit
+| A1  | Introdução a linguagem C - Constantes/Variáveis/Escopo/Operadores|
+| --- | ---------- |
+| 1 | Tipos de variáveis numéricas     |
+| 2 | Operadores Lógicos e Relacionais |
+| 3 | Operadores Lógicos e Relacionais |
 
 
+| A2 | Comandos de E/S - Estrutura Condicional if/else Comando switch |
+| ----- | ------------------------------------ |
+| 1  | Média de 3 números                      |
+| 2  | Área do triângulo                       |
+| 3  | Maior número                            |
+| 4  | Classificação do triângulo              |
+| 5  | Calculadora com if/else                 |
+| 6  | Calculadora com switch                  |
+| 7  | Soma de múltiplos com while             |
+| 8  | Soma de múltiplos com while e restrição |
+| 9  | Contador de pares e ímpares com while   |
+| 10 | Maior salário                           |
+
+| A3 | Estrutura de Repetição        |
+| --- | ---------------------------- |
+| 1 | Fatorial com for               |
+| 2 | Somatório de fatorial          |
+| 3 | Fibonnacci com do/while        |
+| 4 | Somatório e média              |
+
+| A4 | Funções    |
+| --- | --------- |
+| 1 | Calculadora com função |
+| 2 | Número perfeito        |
+| 3 | Número primo           |
+
+| A6 | Vetores e Matrizes               |
+| --- | ------------------------------- |
+| 1 | Categoria por idade               |
+| 2 | Comparador de vetores de inteiros |
+| 3 | Matriz amizade                    |
+| 4 | Jogadas do dado                   |
+
+| A9 | Struct                                |
+| --- | --- |
+| 1 | Manipulação da estrutura lista ordenada|
+
+| A12 | Listas: Alocação Encadeada Dinâmica |
+| --- | ----- |
+| 1 | Interseção e União de lista simplesmente encadeada |
+
+- As pilhas, filas e listas encadeadas possuem nó cabeça.
+- A listas com vetor também funcionam como listas circulares.

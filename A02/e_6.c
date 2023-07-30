@@ -15,15 +15,19 @@ int main() {
     case '+':
       printf("Resultado= %.2f", num1 + num2);
       break;
+      
     case '-':
       printf("Resultado= %.2f", num1 - num2);
       break;
+      
     case '*':
       printf("Resultado= %.2f", num1 * num2);
       break;
+      
     case '/':
       printf("Resultado= %.2f", num1 / num2);
       break;
+      
     default:
       printf("Operação inválida");  
     

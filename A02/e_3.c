@@ -7,7 +7,11 @@ int main(){
   int n1, n2, n3;
 
   printf("Digite 3 numeros: \n");
-  scanf("%d %d %d", &n1, &n2, &n3);
+  
+  /*scanf("%d %d %d", &n1, &n2, &n3);*/
+  n1 = 4; 
+  n2 = 56;
+  n3 = 10;
 
   if (n1 >= n2 && n1 >= n3)
     printf("%d", n1);

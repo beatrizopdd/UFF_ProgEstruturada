@@ -21,14 +21,17 @@ int main(){
     resultado = v1 + v2;
     printf("Resultado = %f", resultado);
   } 
+  
   else if (operacao == '-') {
     resultado = v1 - v2;
     printf("Resultado = %f", resultado);
   } 
+   
   else if (operacao == '/') {
     resultado = v1 / v2;
     printf("Resultado = %f", resultado);
   } 
+  
   else if (operacao == '*') {
     resultado = v1 * v2;
     printf("Resultado = %f", resultado);

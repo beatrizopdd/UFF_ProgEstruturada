@@ -1,105 +1,121 @@
 #include <stdio.h>
-#define MAX 100
+#define MAX 10
 
 struct LISTA {
   int elemento[MAX];
   int total;
 };
-
 typedef struct LISTA tLista;
 
 int menu() {
+
   int opcao;
+  
   do {
-    printf("Digite uma opção \n(1) Inserir elemento \n(2) Remover elemento \n(3) Mostrar lista \n(4) Finalizar programa \n");
+    printf("\nDigite uma opção \n(1) Inserir elemento \n(2) Remover elemento \n(3) Mostrar lista \n(4) Finalizar programa \n");
     scanf(" %d", &opcao);
-  } while (1 > opcao || 4 < opcao);
+  } while (opcao < 1 || opcao > 4);
   
   return opcao;
 }
 
 int busca(tLista *lista, int elemento, int *posicao) {
+
   int i = 0;
+  
+  /* indice menor que o tamanho da lista E elemento menor que o conteúdo atual */
   while (i < lista->total && elemento > lista->elemento[i])
     i++;
+  
   *posicao = i;
 
+  /* chegou no final == não encontrou */
   if (lista->total == i)
-    return 1;
+    return 0;
+  
+  /* não chegou no final */
   else
+    /* o elemento dessa posição é o que eu busco == encontrou*/
     if (elemento == lista->elemento[i])
-      return 0;
-    else
       return 1;
+      
+    else
+      return 0;
 }
 
 void insereL(tLista *lista, int elemento) {
   int P;
 
-  if (busca(lista, elemento, &P) == 0)
-    printf("Está na lista na ṕosição %d!", P);
+  if (busca(lista, elemento, &P) == 1)
+    printf("\nEstá na lista na ṕosição %d!", P);
   
   else {
+    /* passando todos os elementos pós P para a próxima posição */
     for (int i = lista->total; i > P; i--)
       lista->elemento[i] = lista->elemento[i-1];
     
     lista->elemento[P] = elemento;
     lista->total++;
   }
+  
 }
 
 void removeL(tLista *lista, int elemento) {
   int P;
   
-  if (busca(lista, elemento, &P) == 0) {
+  if (busca(lista, elemento, &P) == 1) {
+    /* passa todos os elementos pós P para frente */
     for (int i = P; i < lista->total - 1; i++)
       lista->elemento[i] = lista->elemento[i+1];
     
     lista->total--;
     
   } else 
-    printf("Não está na lista!");
+    printf("\nNão está na lista!");
   
 }
 
 
 int main() {
+  
   tLista lista;
   lista.total = 4;
-  int oper, elem = 0;
+  int operacao, elem = 0;
 
   lista.elemento[0] = 4;
   lista.elemento[1] = 6;
   lista.elemento[2] = 52;
   lista.elemento[3] = 200;
 
-  do {
-    oper = menu();
+  /*operacao = menu();*/
 
-    if (oper == 1) {
-      do {
-        insereL(&lista, elem);
-        printf("Digite um numero para inserir: ");
-        scanf(" %d", &elem);
-      } while (elem >= 0);
-    } else if (oper == 2) {
+  /*printf("\nDigite um numero para inserir: ");
+  scanf(" %d", &elem);*/
+  elem = 5;
+  insereL(&lista, elem);
       
-      printf("Digite um numero para remover: ");
-      scanf(" %d", &elem);
-      removeL(&lista, elem);
+  /*printf("\nDigite um numero para remover: ");
+  scanf(" %d", &elem);*/
+  elem = 200;
+  removeL(&lista, elem);
     
-    } else if (oper == 3) {
+  printf("[ ");
+  for (int i = 0; i < lista.total; i++) {
+    printf("%d ", lista.elemento[i]);
+  }
+  printf("]\n");
+  
+  /*printf("\nDigite um numero para inserir: ");
+  scanf(" %d", &elem);*/
+  elem = 52;
+  insereL(&lista, elem);
       
-      printf("[ ");
-      for (int i = 0; i < lista.total; i++) {
-        printf("%d ", lista.elemento[i]);
-      }
-      printf("]\n");
-      
-    }
-    
-  } while (oper != 4);
-  printf("FIM DO PROGRAMA!");
+  /*printf("\nDigite um numero para remover: ");
+  scanf(" %d", &elem);*/
+  elem = 13;
+  removeL(&lista, elem);   
+  
+  printf("\nFIM DO PROGRAMA!");
   
   return 0;
 }

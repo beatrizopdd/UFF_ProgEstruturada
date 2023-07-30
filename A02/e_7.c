@@ -8,12 +8,8 @@ int main() {
   
   multiplo = N;
   while (multiplo < 200) {
-    /* if (multiplo % N == 0) soma += multiplo;
-    multiplo += 1; */
-    
     soma += multiplo;
     multiplo += N;
-    
   }
 
   printf("A soma dos múltiplos de %d é igual a %d", N, soma);

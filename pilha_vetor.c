@@ -46,7 +46,7 @@ void print(pilha P) {
 }
 
 int main() {
-  int vetor[20] = {0, 2, 3, 4, 5, 8, 12, 24, 30, 42, 65}; /*pytutor não admite input*/
+  int vetor[8] = {0, 2, 5, 8, 12, 24, 42, 65}; /*pytutor não admite input*/
   
   pilha P;
   P.altura = -1;

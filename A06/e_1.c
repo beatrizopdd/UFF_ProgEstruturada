@@ -23,12 +23,12 @@ int main() {
   char *turma;
 
   do {
-    printf("\n\nDigite uma idade: ");
+    printf("\nDigite uma idade: ");
     scanf(" %d", &idade);
 
     if (idade >= 0) {
       turma = categoria(idade);
-      printf("Sua categoria é %s", turma);
+      printf("\nSua categoria é %s", turma);
     }
     
   } while (idade >= 0);

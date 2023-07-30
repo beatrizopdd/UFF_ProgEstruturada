@@ -16,27 +16,28 @@ int main() {
 
 	/*
 	vf1 = (10 > 5) e não(10 < 9) ou (3 <= 2 + 1)
-			= [SIM e não(NÃO)] ou [3 <= 3] 
-			= [SIM e SIM] ou [SIM]
-			= SIM ou SIM
-			= SIM = 1
+	    = [SIM e não(NÃO)] ou [3 <= 3]
+	    = [SIM e SIM] ou [SIM]
+	    = SIM ou SIM
+	    = SIM = 1
 	vf2 = não[(x – 2) < (y + 3)] e [y – x * 2]
-			= não[(3 - 2) < (6 + 3)] e [6 - 3 * 2]
-			= não[1 < 9] e [6 - 6]
-			= não[SIM] e 0
-			= NÃO e NÃO
-			= NÃO = 0
+	    = não[(3 - 2) < (6 + 3)] e [6 - 3 * 2]
+	    = não[1 < 9] e [6 - 6]
+	    = não[SIM] e 0
+	    = NÃO e NÃO
+	    = NÃO = 0
 	
 	e1 = 3 * 3
 	   = 9
 	
 	e2 = 6 + (3 - 6)
-		 = 6 - 3
-		 = 3 
+	   = 6 - 3
+	   = 3 
 	
 	e3 = 1 + 6
-		 = 7
-		 y = 7 
+	   = 7
+	y = 7 
 	*/
+	
 	return 0;
 }
