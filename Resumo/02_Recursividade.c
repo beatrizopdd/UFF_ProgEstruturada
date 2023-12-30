@@ -2,11 +2,11 @@
 
 // (tipo do que a função retorna) nome(parametros)
 void deTrasPraFrente(char vetor[], int inicio, int tamanho) {
-    // enquanto o começo for menor que o tamanho
+    /*enquanto o começo for menor que o tamanho
     // chama pro proximo
     // o proximo executa
     // volta pro que chamou
-    // executa o que chamou
+    // executa o que chamou*/
     if (inicio < tamanho) {
         deTrasPraFrente(vetor, inicio+1, tamanho);
         printf("%c\n", vetor[inicio]);

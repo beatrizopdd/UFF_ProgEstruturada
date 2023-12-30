@@ -35,10 +35,10 @@ int main() {
     marie.sexo = 'F';
 
     // vetor com ponteiros os espaços de memória que guardam os gatos
-    Gato *feiraDeAdocao[2] = {&garfield, &marie};
+    Gato* feiraDeAdocao[2] = {&garfield, &marie};
 
     for (int i = 0; i < 2; i++) {
-        Gato *opcao = feiraDeAdocao[i];
+        Gato* opcao = feiraDeAdocao[i];
         printf("\n%s\n", opcao->nome); // para acessar os atributos de um ponteiro usamos '->'
         printf("sexo: %c\n", opcao->sexo);
         printf("idade: %d\n", opcao->idade);

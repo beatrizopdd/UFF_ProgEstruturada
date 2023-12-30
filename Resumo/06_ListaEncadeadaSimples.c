@@ -48,7 +48,7 @@ Lista *insereOrdenado(Lista *lista, int numero) {
             se auxiliar->prox = null e o programa testar auxiliar->prox->info (NULL->info) isso da erro
             se o programa testa a primeira condição e ela é FALSA ele nem testa a próxima;
             Prova: basta uma condição falsa pra que tudo seja falso */
-        while (auxiliar->prox != NULL && auxiliar->prox->info < numero)
+        while (auxiliar->prox != NULL && (auxiliar->prox)->info < numero)
             auxiliar = auxiliar->prox;
 
         Lista *novo = criaNoh(numero);
